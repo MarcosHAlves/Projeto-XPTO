@@ -1,0 +1,355 @@
+/*reset css
+asterisco = todos os elementos da página
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*variáveis*/
+
+:root{
+    --color-light: #fff;
+    --color-dark: #000;
+    --color-pink: #dc143c;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%; /*mesma coisa que 1rem, para facilitar no rem*/ 
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+}
+
+.header-page{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    /* ainhamento vertical */
+    align-items: center;
+    /* alinhamento horizontal */
+    justify-content: space-between;
+    padding: 0 1rem; /*ctrl + f, seleciona todos e replace*/
+    position: absolute;
+    z-index: 1;
+    /*o header-page fica fixo, e o que esta embaixo sobe - position absolute*/
+    background-image: linear-gradient(to top, rgba(143,30,30,0.3),rgba(0,0,0,0.3));
+}
+
+.header-title{
+    font-size: 4rem;
+    color: var(--color-light);
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+    color: var(--color-pink);
+}
+
+.header-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.header-menu li{
+    margin: 0 1rem;
+}
+.header-menu a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-light);/*ctrl + barra + espaço p/ acessar as cores*/
+    transition: .5s;
+}
+
+.header-menu a:hover{
+    color: var(--color-pink);
+}
+
+.btn{
+    border: 1px solid var(--color-pink);
+    padding: 8px 2.5rem; /*só altera pra rem, a partir de 10px*/
+    background-color: var(--color-pink);
+    border-radius: 7rem;
+    text-decoration: none;
+    color: var(--color-light);
+}
+
+.btn:hover{
+    background-color: transparent;
+    color: var(--color-pink);
+    transition: .5s;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-attachment: scroll; propriedade padrão*/
+    background-attachment: fixed; /*imagem fixa, conforme rola a tela*/
+}
+
+
+/************************ hero ***************************/
+.hero {
+    display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     color: var(--color-light);
+     text-align: center;
+ }
+ 
+ .hero-title {
+     font-size: 3.5rem;
+     margin-bottom: 3rem;
+ }
+ .hero-text {
+     margin-bottom: 4rem;
+     width: 60%;
+ }
+ 
+ /*********************** fim hero ***********************/
+ 
+ 
+ /*********************** card  ***********************/
+ .cards {
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+ }
+ 
+ .card-item {
+    width: 30%;
+    height: 500px;
+    border: 1px solid var(--color-pink);
+    border-radius: 1rem;
+    color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+ }
+ 
+ .card-icone {
+    color: var(--color-light);
+    font-size: 5rem;
+    border: 1px solid var(--color-pink);
+    padding: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--color-pink);
+    transition: .5s;
+ }
+.card-icone:hover {
+    transform: rotate(1440deg);
+    cursor: pointer;
+}
+.card-title {
+    margin: 2rem 0;
+}
+
+.card-text {
+    margin-bottom: 4rem;
+}
+
+ /*********************** fim card  ***********************/
+
+/************************ solution ************************/
+.solution {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-light);
+}
+.solution-title {
+    font-size: 45px;
+    margin: 2rem 0;
+}
+
+.solution-text {
+    width: 60%;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    margin-bottom: 3rem;
+}
+
+
+.solution-span {
+    display: block;
+}
+
+.solution-span::after{
+    content: 'Agronegócio';
+    color: var(--color-pink);
+    animation: solutions 7s infinite;
+    transition: .5s;
+}
+
+@keyframes solutions {
+    
+    25% {
+        content: 'Educação';
+        color: #369;
+    }
+
+    50% {
+        content: 'Saúde';
+        color: #f60;
+    }
+
+    75% {
+        content: 'Transporte';
+        color: #090;
+    }
+}
+.gear {
+    margin-left: 7px;
+    animation: gear 1s linear infinite;
+}
+
+
+@keyframes gear {
+    
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+/************************ fim solution ********************/
+
+/*********************** Galeria de Imagens ***********************/
+.gallery {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 5rem 0;
+}
+
+.gallery-item {
+    margin: 3rem 0;
+    width: 28%;
+    background-color: var(--color-light);
+    padding: 1rem 1rem 2rem 1rem;
+    transition: .5s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+}
+
+/*********************** Fim Galeria de Imagens *******************/
+
+.bg-image-1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0 ,0)), url("../images/pexels-lukas-574071.jpg");
+
+}
+
+.bg-image-2{
+    background-image: url("../images/pexels-christina-morillo-1181271.jpg");
+}
+
+.bg-image-3{
+    background-image: url("../images/pexels-markus-spiske-1089440.jpg");
+}
+
+.bg-color-1{
+    background-color: #000;
+}
+/*iniciando o responsivo*/
+
+@media(max-width: 768px) {
+    .header-page {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .header-title {
+        font-size: 4vmin;
+    }
+
+    .header-menu a {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .btn {
+        padding: 2px 1rem;
+    }
+
+    .hero-title {
+        font-size: 5vmin;
+        margin-bottom: 3rem;
+    }
+
+    .hero-text {
+        width: 80%;
+    }
+
+    .card-item {
+        width: 70%;
+        min-height: 350px;
+        margin: 2rem 0;
+    }
+
+    .solution-title {
+        font-size: 5vmin;     
+    }
+
+    .solution-text {
+        width: 80%;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .gallery-item {
+        margin: 3rem 0;
+        width: 70%;
+    }
+}
+
+@media(max-width: 468px) {
+    .card-item {
+        width: 92%;
+        min-height: 450px;       
+    }
+
+    .gallery-item figcaption {
+        font-size: 1.2rem;
+        font-weight: 900;
+    }
+}
+
+
+
+/*vw - viewport width, vh - viewport height
+10vw = 10% view
+50vh = 50% view
+vw - aparece barra de rolagem. aconselhável usar porcentagem
+pexels - busca de imagens - 192rem grande
+background-position: center - mesma coisa que 50%; - ponto central do container
+*/
